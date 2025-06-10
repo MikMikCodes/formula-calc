@@ -1,5 +1,4 @@
 import React from "react";
-import { getPhaseColor } from "../utils/conversions";
 
 const PhaseTotals = ({ ingredients, batchSizeOz }) => {
   const totals = ingredients.reduce(
