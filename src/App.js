@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { formulaAPI } from "./services/api";
+import { useEffect } from "react";
 import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
 import IngredientsRow from "./components/IngredientsRow";
 import PhaseTotals from "./components/PhaseTotals";
@@ -80,22 +82,49 @@ const App = () => {
   );
 
   const [formulaName, setFormulaName] = useState("");
-  const [savedFormulas, setSavedFormulas] = useState(() => {
-    const data = localStorage.getItem("savedFormulas");
-    return data ? JSON.parse(data) : {};
-  });
+  const [savedFormulas, setSavedFormulas] = useState({});
+  const [loading, setLoading] = useState(false);
 
-  const saveFormula = () => {
-    if (!formulaName.trim()) return;
-    const newFormulas = {
-      ...savedFormulas,
-      [formulaName]: {
-        ingredients: ingredients,
-        fragranceSplits: fragranceSplits,
-      },
+  // Load saved formulas from API or localStorage
+  useEffect(() => {
+    const loadFormulas = async () => {
+      setLoading(true);
+      try {
+        const formulas = await formulaAPI.getSavedFormulas();
+        setSavedFormulas(formulas);
+      } catch (error) {
+        console.error("Error loading formulas:", error);
+      } finally {
+        setLoading(false);
+      }
     };
-    setSavedFormulas(newFormulas);
-    localStorage.setItem("savedFormulas", JSON.stringify(newFormulas));
+
+    loadFormulas();
+  }, []);
+
+  // Save formula to API and localStorage
+  const saveFormula = async () => {
+    if (!formulaName.trim()) return;
+
+    setLoading(true);
+    try {
+      const result = await formulaAPI.saveFormula(
+        formulaName,
+        ingredients,
+        fragranceSplits,
+        batchSizeOz
+      );
+
+      // Refresh the formulas list
+      const updatedFormulas = await formulaAPI.getSavedFormulas();
+      setSavedFormulas(updatedFormulas);
+
+      console.log("Formula saved:", result);
+    } catch (error) {
+      console.error("Error saving formula:", error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const loadFormula = (e) => {
@@ -108,15 +137,28 @@ const App = () => {
     }
   };
 
-  const deleteFormula = () => {
+  const deleteFormula = async () => {
     if (!formulaName.trim()) return;
-    const updated = { ...savedFormulas };
-    delete updated[formulaName];
-    setSavedFormulas(updated);
-    localStorage.setItem("savedFormulas", JSON.stringify(updated));
-    setFormulaName("");
-    setIngredients([{ name: "", percent: "", phase: "water", id: "initial" }]);
-    setFragranceSplits({});
+
+    setLoading(true);
+    try {
+      await formulaAPI.deleteFormula(formulaName);
+
+      // Refresh the formulas list
+      const updatedFormulas = await formulaAPI.getSavedFormulas();
+      setSavedFormulas(updatedFormulas);
+
+      // Reset form
+      setFormulaName("");
+      setIngredients([
+        { name: "", percent: "", phase: "phaseA", id: "initial" },
+      ]);
+      setFragranceSplits({});
+    } catch (error) {
+      console.error("Error deleting formula:", error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -149,8 +191,9 @@ const App = () => {
               className="btn-6"
               data-cy="save-formula"
               onClick={saveFormula}
+              disabled={loading}
             >
-              <span>Save Formula</span>
+              <span>{loading ? 'Saving...' : 'Save Formula'}</span>
             </button>
 
             {Object.keys(savedFormulas).length > 0 && (

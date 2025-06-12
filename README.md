@@ -24,6 +24,7 @@ cd moon-calc-app
 ### 2. Install Dependencies
 ```bash
 npm install
+npm install cypress --save-dev
 npm start
 ```
 

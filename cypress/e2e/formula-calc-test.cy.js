@@ -1,6 +1,7 @@
 describe("Moon Moisture Formula Recalculator App", () => {
   beforeEach(() => {
-    cy.visit("http://localhost:3000");
+    cy.visit("/"); 
+
   });
 
   it("adds an ingredient and updates totals correctly", () => {
