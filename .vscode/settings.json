@@ -1,0 +1,11 @@
+{
+  "jest.runMode": "off",
+  "jest.testExplorer": {
+    "enabled": true
+  },
+  "files.associations": {
+    "*.test.js": "javascript"
+  },
+  "javascript.preferences.includePackageJsonAutoImports": "auto",
+  "testing.automaticallyOpenPeekView": "never"
+}
