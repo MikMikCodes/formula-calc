@@ -255,6 +255,5 @@ This application demonstrates comprehensive testing approaches:
 ## 👏 Credits
 
 - Created with 💜 by Raemika L.
-- Created with 💜 by Raemika L.
 - For business: Moon Moisture LLC
 
