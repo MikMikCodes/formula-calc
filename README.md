@@ -4,6 +4,33 @@
 
 Let me tell you, this app helps DIY skincare formulators quickly recalculate ingredient amounts based on batch size. Whether you're scaling up a body butter formula or adjusting percentages for smaller test batches, this app has your back.
 
+## 📽️ App Demo (GIFs)
+
+### 🎨 Assign Ingredient Phases
+![Ingredient Phases](./public/demo/phases.gif)
+
+### Drag & Drop Ingredient Reordering
+![Drag & Drop](./public/demo/dragDrop.gif)
+
+### 💾 Save Locally + Load Previous Formula
+![Save Formula](./public/demo/saveFormula.gif)
+![Open Formula](./public/demo/saveFormula_open.gif)
+
+### 🌸 Fragrance Ratio Splitter
+![Fragrance Split 2](./public/demo/fragrance_2.gif)
+![Fragrance Split 3](./public/demo/fragrance_3.gif)
+
+### 🧮 Calculated Grams/Ounces by Phase
+![Phase Totals](./public/demo/waterPhase.gif)
+
+### ✨ Add Ingredients Quickly
+![Add Ingredients](./public/demo/button_ingredient.gif)
+
+### ➕ Delete Ingredients Easily
+![Remove Ingredients](./public/demo/button_remove.gif)
+
+---
+
 ## Features
 
 - **Ingredient Calculator** – Instantly convert percentages into grams/oz as you build your formula  
