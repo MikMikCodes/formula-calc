@@ -6,28 +6,30 @@ Let me tell you, this app helps DIY skincare formulators quickly recalculate ing
 
 ## 📽️ App Demo (GIFs)
 
-### 🎨 Assign Ingredient Phases
-![Ingredient Phases](./public/demo/phases.gif)
+## 📽️ App Demo (GIFs)
 
-### Drag & Drop Ingredient Reordering
-![Drag & Drop](./public/demo/dragDrop.gif)
+<div align="center">
 
-### 💾 Save Locally + Load Previous Formula
-![Save Formula](./public/demo/saveFormula.gif)
-![Open Formula](./public/demo/saveFormula_open.gif)
+<table>
+  <tr>
+    <td align="center"><strong>Assign Phases</strong><br><img src="./public/demo/phases.gif" width="230"></td>
+    <td align="center"><strong>Drag & Drop</strong><br><img src="./public/demo/dragDrop.gif" width="230"></td>
+    <td align="center"><strong>Save Formula</strong><br><img src="./public/demo/saveFormula.gif" width="230"></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>Open Saved Formula</strong><br><img src="./public/demo/saveFormula_open.gif" width="230"></td>
+    <td align="center"><strong>Fragrance Split (2)</strong><br><img src="./public/demo/fragrance_2.gif" width="230"></td>
+    <td align="center"><strong>Fragrance Split (3)</strong><br><img src="./public/demo/fragrance_3.gif" width="230"></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>Water Phase Tracker</strong><br><img src="./public/demo/waterPhase.gif" width="230"></td>
+    <td align="center"><strong>Add Ingredient</strong><br><img src="./public/demo/button_ingredient.gif" width="230"></td>
+    <td align="center"><strong>Remove Ingredient</strong><br><img src="./public/demo/button_remove.gif" width="230"></td>
+  </tr>
+</table>
 
-### 🌸 Fragrance Ratio Splitter
-![Fragrance Split 2](./public/demo/fragrance_2.gif)
-![Fragrance Split 3](./public/demo/fragrance_3.gif)
+</div>
 
-### 🧮 Calculated Grams/Ounces by Phase
-![Phase Totals](./public/demo/waterPhase.gif)
-
-### ✨ Add Ingredients Quickly
-![Add Ingredients](./public/demo/button_ingredient.gif)
-
-### ➕ Delete Ingredients Easily
-![Remove Ingredients](./public/demo/button_remove.gif)
 
 ---
 
