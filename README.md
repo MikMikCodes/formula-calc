@@ -4,7 +4,6 @@
 
 Let me tell you, this app helps DIY skincare formulators quickly recalculate ingredient amounts based on batch size. Whether you're scaling up a body butter formula or adjusting percentages for smaller test batches, this app has your back.
 
-## 📽️ App Demo (GIFs)
 
 ## 📽️ App Demo (GIFs)
 
