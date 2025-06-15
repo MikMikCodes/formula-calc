@@ -1,16 +1,16 @@
 # 🌙 Moon Moisture Formula Recalculator
 
-Hey there, I'm Mika, the owner of Moon Moisture Skincare and the creator of this app. Let me tell you, this app is a total game-changer for skincare creators like me. It helps us scale formulas, track ingredients, and stay super organized. Whether you're whipping up lotions, butters, or scrubs, this tool can recalculate based on batch size, monitor water phase loss, and even split fragrance formulas.
+🎨 Built by Raemika L. | Owner of Moon Moisture LLC
 
-## ✨ Features
+Let me tell you, this app helps DIY skincare formulators quickly recalculate ingredient amounts based on batch size. Whether you're scaling up a body butter formula or adjusting percentages for smaller test batches, this app has your back.
 
-- **Ingredient Calculator** – Add ingredients + get auto conversions in grams/oz
-- **Water Phase Tracker** – Watch your water phase weight before/after heating to track evaporation
-- **Fragrance Split Tool** – Split up to 3 fragrances using set ratios
-- **Responsive Design** – Works on desktop, tablet, and mobile screens
-- **Save Formulas with Versions** – No more “wait, which version was that?”
-- **Responsive Design** – Works on laptop, tablet, or phone
-- **Offline Backup** – If the database is down, it keeps your data safe locally
+## Features
+
+- **Ingredient Calculator** – Instantly convert percentages into grams/oz as you build your formula  
+- **Fragrance Split Tool** – Auto-split up to 3 fragrances with smart ratio presets  
+- **Water Phase Tracker** – Enter before/after weights to see how much evaporated  
+- **Offline Backup** – Data saves locally so you don’t lose formulas if the server’s down  
+
 
 ## Tech Stack
 
@@ -30,6 +30,18 @@ Hey there, I'm Mika, the owner of Moon Moisture Skincare and the creator of this
 - Node.js (v14 or higher)
 - Git
 - XAMPP or MySQL server
+
+---
+
+## 💾 Saving & LocalStorage
+
+🔒 Note: Saved formulas are stored locally in your browser using localStorage. This means:
+
+- Your saved formulas will persist on **your device** when you refresh the page.
+- They are **not shared or visible** to other users.
+- If you clear your browser data or switch devices, your saved formulas will be lost.
+
+To enable shared saving across devices or users, you'd need to set up a backend with database integration.
 
 ---
 
@@ -155,6 +167,8 @@ node selenium-tests/manual/formula-test-runner.js
 
 Created with 💜 by Raemika L.  
 Made for companies like Moon Moisture LLC because formulas should be as smooth as your skin.
+
+💼 Let’s connect on [LinkedIn](https://www.linkedin.com/in/raemikalugo/)
 
 
 ---
