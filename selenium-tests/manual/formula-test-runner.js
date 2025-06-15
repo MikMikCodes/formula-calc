@@ -13,16 +13,16 @@ const chrome = require("selenium-webdriver/chrome");
   try {
     console.log("🧪 Launching Chrome...");
 
-    // 🌐 Load your deployed app
+ 
     const APP_URL = "https://mikmikcodes.github.io/formula-calc/";
     await driver.get(APP_URL);
     console.log("🌍 Navigated to:", APP_URL);
 
-    // 🕒 Wait for the React app container to be visible
+   
     await driver.wait(until.elementLocated(By.css('[data-cy="app-container"]')), 10000);
     console.log("✅ App container found");
 
-    // 🏷 Check title matches what you'd expect
+    
     const title = await driver.getTitle();
     console.log("📄 Page title:", title);
 
