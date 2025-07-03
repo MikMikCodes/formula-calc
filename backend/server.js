@@ -15,7 +15,7 @@ const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '', // XAMPP default
-    database: 'moonmoisture_db'
+    database: 'moon_moisture_db'
 });
 
 db.connect((err) => {
